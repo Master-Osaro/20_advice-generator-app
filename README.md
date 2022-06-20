@@ -51,7 +51,6 @@ async function loadAdvice() {
     const adviceObject = await response.json();
     advice_id.innerHTML = "Advice #" + adviceObject.slip.id;
     advice_text.innerHTML = '"' + adviceObject.slip.advice + '"';
-    console.log(adviceObject);
 }
 
 loadAdvice();
