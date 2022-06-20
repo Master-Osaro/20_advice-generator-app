@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ## Colors */
+    /* ### Primary */
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --neon-green-ds: rgba(82, 255, 168, 0.7);
+    /* ### Neutral */
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+    /* ## Typography */
+    --body-font: 'Manrope', sans-serif;
+    /* ### Body Copy */
+    --font-size-quote: 28px;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--dark-blue);
+    color: var(--light-cyan);
+    font-family: var(--body-font);
+}
+
+.advice-card {
+    background: var(--dark-grayish-blue);
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    gap: 20px;
+    box-shadow: 2px 12px 30px 2px rgba(0, 0, 0, 0.2);
+}
+
+.advice-card__number {
+    text-transform: uppercase;
+    color: var(--neon-green);
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+    /* word-spacing: 14px; */
+}
+
+.advice-card__advice {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.img-divider {
+    width: 100%;
+}
+
+.img-dice {
+    height: 64px;
+    width: 64px;
+    background: var(--neon-green);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    justify-self: flex-end;
+    margin-bottom: -55px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.img-dice:hover,
+.img-dice:active,
+.img-dice:focus-visible {
+    box-shadow: 2px 2px 30px 1px var(--neon-green-ds);
+}
+
+@media only screen and (max-width: 420px) {
+    body {
+        padding: 1rem;
+    }
+}
